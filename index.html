@@ -6,18 +6,18 @@
 <title>Simple Calculator</title>
 <h1 class="text">MY CALCULATOR</h1>
 <style>
-    
-  body{
-    background-image: url(media/images.jfif);
+body{
+    background-image: url(assets/image.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
+    height: 100vh;
   }
   .text {
     font-family: Verdana;
     font-size: 50px;
     margin-top: 15px;
     text-align: center;
-    -webkit-text-fill-color:rgb(36, 80, 82);
+    -webkit-text-fill-color:rgb(238, 121, 185);
     
   }
     .calculator {
@@ -45,10 +45,9 @@
         background-color: bisque;
         margin-right: 4px;
     }
-</style>
-</head>
-<body>
-    <div class="calculator">
+    </style>
+    <body>
+     <div class="calculator">
         <input type="text" id="display" disabled>
         <br>
         <input type="button"  value="7" onclick="addToDisplay('7')">
@@ -59,7 +58,7 @@
         <input type="button" value="4" onclick="addToDisplay('4')">
         <input type="button" value="5" onclick="addToDisplay('5')">
         <input type="button" value="6" onclick="addToDisplay('6')">
-        <input type="button" value="" onclick="addToDisplay('')">
+        <input type="button" value="*" onclick="addToDisplay('*')">
         <br>
         <input type="button" value="1" onclick="addToDisplay('1')">
         <input type="button" value="2" onclick="addToDisplay('2')">
@@ -68,12 +67,11 @@
         <br>
         <input type="button" value="0" onclick="addToDisplay('0')">
         <input type="button" value="." onclick="addToDisplay('.')">
-        <input type="button" value="=" onclick="calculate()">
+        <input type="button" value="=" onclick="calculate('=')">
         <input type="button" value="+" onclick="addToDisplay('+')">
         <br>
         <input type="button" value="C" onclick="clearDisplay()">
     </div>
-
     <script>
         function addToDisplay(value) {
             document.getElementById('display').value += value;
@@ -92,5 +90,6 @@
             }
         }
     </script>
+    </head>
 </body>
 </html
